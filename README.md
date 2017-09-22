@@ -1,2 +1,6 @@
-# sps
-Simple Port Scanner
+# sps - Simple Port Scanner
+This is a simple port scanner that checks common ports to see if they're open in the specified host or not.
+
+## Requirements
+1- argparse - for handling command line arguments
+2- termclolor - for painting stuff
