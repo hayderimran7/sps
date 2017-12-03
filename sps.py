@@ -25,14 +25,13 @@ def main():
 		timeout = 1
 		socket.setdefaulttimeout(timeout)	
 		
-		port_numbers = [21, 22, 23, 25, 80, 443, 3306]
 		port_names = {21: "ftp", 22: "ssh", 23: "telent", 
 						25: "smtp", 80: "http", 443: "https", 3306: "mysql"}
 
 		ip = socket.gethostbyname(server)
 		print("scanning %s (%s):" % (server, ip))
 
-		for port in port_numbers:
+		for port in port_names.keys():
 			thrd = thr.Thread(target=port_scan, args=(server, port, port_names))
 			thrd.start()
 
